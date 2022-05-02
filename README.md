@@ -6,6 +6,7 @@ Nome dos integrantes:
 - Rodrigo Goularte
 
 Link do Surge: www.link.com.br
+
 Link do wireframe: https://www.figma.com/file/RnqwBq1bauzJigyOdoWl0K/Pokedex-7?node-id=0%3A1
 
 O que funciona:
