@@ -1,0 +1,149 @@
+{
+    "info": {
+        "_postman_id": "dbc8cef1-937d-47a2-be9b-66124d33712f",
+        "name": "PokeApi",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "getArrayPokemons",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://pokeapi.co/api/v2/pokemon/?limit=100",
+                    "protocol": "https",
+                    "host": [
+                        "pokeapi",
+                        "co"
+                    ],
+                    "path": [
+                        "api",
+                        "v2",
+                        "pokemon",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "100"
+                        }
+                    ]
+                },
+                "description": "## EndPoint para pegar nome e url de um numero limit de pokemons\n\nretorna um array de objeto contendo nome do pokemon e url para endpoint getPokemonById\n\n* * *\n\n# parametros:\n\nLimit: parametro para o numeros limite de quantidade de pokemos retornados pelo endPoint\n\n* * *"
+            },
+            "response": []
+        },
+        {
+            "name": "getPokemonDetailsById",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+                    "protocol": "https",
+                    "host": [
+                        "pokeapi",
+                        "co"
+                    ],
+                    "path": [
+                        "api",
+                        "v2",
+                        "pokemon",
+                        "bulbasaur"
+                    ]
+                },
+                "description": "## EdnPoint para pegar informacoes de um pokemon especifico!\n\nretorna informacoes relevantes como:\n\n*   cor\n*   imagens frente e costa do pokemon\n*   peso\n*   altura ...\n    \n\n* * *\n\n# parametros:\n\nNome ou Id do pokemon\n\n* * *\n\n# informacoes uteis:\n\npara pegar cada informacao do pokemon:\n\n**Nome:**  \nresponse.data.name\n\n* * *\n\n**Id:**  \nresponse.data.id\n\n* * *\n\n**Altura:**  \nresponse.data.height\n\n* * *\n\n**Peso:**  \nresponse.data.weight\n\n* * *\n\n**Imagem frente:**  \nresponse.data.sprites.other.dream_world.front_default\n\n* * *\n\n**Stats:** 'retorna um array'  \nresponse.data.stats  \npodemos fazer um map e pegar so o que interessa ex:\n\n```\nresponse.data.stats.map(stat=>{\n      //informacoes:  \n    const statName = stat.stat.name\n    const statBase = stat.base_stat\n})\n\n```\n\n* * *\n\n**Tipo do pokemon:**\n\ntipo 1:  \nresponse.data.types\\[0\\].type.name\n\ntipo 2:  \nresponse.data.types\\[1\\].type.name\n\n* * *\n\n**Movimentos:** 'retorna um Array '\n\nresponse.data.moves\n\n* * *"
+            },
+            "response": []
+        },
+        {
+            "name": "getEvolutionChain",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://pokeapi.co/api/v2/evolution-chain/4",
+                    "protocol": "https",
+                    "host": [
+                        "pokeapi",
+                        "co"
+                    ],
+                    "path": [
+                        "api",
+                        "v2",
+                        "evolution-chain",
+                        "4"
+                    ]
+                },
+                "description": "## EndPoint to get Evolution Chain\ninformacao do primeiro nivel de evolucao:\nresponse.data.chain.evolves_to.species\n___\nproxima evolucao:\nresponse.data.chain.evolves_to[0].evolves_to.species\n___\nterceira evolucao:\nresponse.data.chain.evolves_to[0].evolves_to[0].evolves_to.species\n___\n"
+            },
+            "response": []
+        },
+        {
+            "name": "getSkills",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+                    "protocol": "https",
+                    "host": [
+                        "pokeapi",
+                        "co"
+                    ],
+                    "path": [
+                        "api",
+                        "v2",
+                        "ability",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "20"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "20"
+                        }
+                    ]
+                },
+                "description": "## EndPoint para pegar nome dos poderes e url de um numero limit e numero offset\n\nlimit -> Array de quantidade de poderes\n\noffset -> Array onde se inicia os poderes\n\npor exemplo ?limit=60&offset=60.\n\n* * *\n\n# parametros:\n\nEx :\n\n| **limit** | **20** |\n| --- | --- |\n| offset | 20 |"
+            },
+            "response": []
+        },
+        {
+            "name": "pokemonLimit",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://pokeapi.co/api/v2/pokemon?limit=4&offset=0",
+                    "protocol": "https",
+                    "host": [
+                        "pokeapi",
+                        "co"
+                    ],
+                    "path": [
+                        "api",
+                        "v2",
+                        "pokemon"
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "4"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "0"
+                        }
+                    ]
+                },
+                "description": "## EndPoint para pegar nome e url de um numero limit e numero offset\n\nChamar qualquer endpoint de  \nAPI sem um ID ou nome de recurso retornará uma lista paginada de  \nrecursos disponíveis para essa API.\n\nlimit -> Array de quantidade de pokemons\n\noffset -> Array onde se inicia os pokemons\n\n  \npor exemplo ?limit=60&offset=60.\n\n* * *\n\n# parametros:\n\nEx :\n\n| **limit** | **4** |\n| --- | --- |\n| offset | 0 |"
+            },
+            "response": []
+        }
+    ]
+}
