@@ -1,5 +1,5 @@
 import React from "react"
-import { ButtonPegar, ButtonDetalhes, CardContainer, CardFooter, CardImage, PokebolaImg, ButtonRemover, Button1, Button2 } from "./Styled"
+import { CardContainer, CardFooter, CardImage, PokebolaImg, Button1, Button2 } from "./Styled"
 import pokebola from "../../Assets/pokeball.png"
 
 function CardPokemons() {
