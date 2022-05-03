@@ -1,3 +1,4 @@
+
 import { Router } from "./Router/Router";
 
 function App() {
@@ -5,7 +6,6 @@ function App() {
     <div>
       <Router />
     </div>
-  );
-}
+)
 
 export default App;
