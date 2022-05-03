@@ -1,24 +1,31 @@
 import React from 'react';
-import {HomeContainer} from "./styled"
+import {HomeContainer} from "../HomePage/Styled"
 import { useNavigate } from "react-router-dom"
 
 
 
 export const HomePage = () => {
+
     
-    const navigate = useNavigate()
     
-    const goToPokedexPage = (navigate) => {
-        navigate("/Pokedex")
-    }
-   
    
         return (
             <HomeContainer>
-                <h1>Pokedex</h1>
+                <h1>Pokedex Home</h1>
             </HomeContainer>
         );
     };
 
 
 export default HomePage
+
+
+
+    
+
+/*const navigate = useNavigate()
+    
+ const goToPokedexPage = (navigate) => {
+    navigate("/Pokedex")
+    }*/
+   
