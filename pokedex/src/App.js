@@ -1,23 +1,20 @@
-import React from 'react';
-import HomePage from './Pages/HomePage/HomePage';
-import Pokedex from './Pages/Pokedex/PokedexPage';
-import PokemonsDetails from './Pages/PokemonsDetails/PokemonsDetailsPage';
 
+// import {HomePage} from './Pages/HomePage/HomePage';
+// import Pokedex from './Pages/Pokedex/PokedexPage';
+// import PokemonsDetails from './Pages/PokemonsDetails/PokemonsDetailsPage';
+
+import {Router} from "./Router/Router";
 
 
 function App() {
-
-  
   return (
-
-     <div>
-     <HomePage/>
+    <div>
+      <Router />
+      {/* <HomePage/>
      <Pokedex/>
-     <PokemonsDetails/>
-     </div>
-    
+     <PokemonsDetails/> */}
+    </div>
   );
 }
 
 export default App;
-
