@@ -21,9 +21,3 @@ export default Pokedex
 
 
 
-
-/*const navigate = useNavigate()
-    
-const goToPokeDetais = (navigate) => {
-    navigate("/Pokedetails")
-}*/
