@@ -1,62 +1,50 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
+import GlobalStateContext from "../../global/GlobalStateContext";
 import PokeCard from "../../Components/PokeCard/PokeCard";
-import { pokeURL } from "../../Constants/pokeURL";
-import Header from "../../Components/Header/Header";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { HomeContainer } from "../HomePage/Styled";
+import { goToPokedexPage } from "../../Router/Coordinator";
 
 export const HomePage = () => {
-  const [pokemonList, setPokemonList] = useState([]);
+  const data = useContext(GlobalStateContext);
+  const navigate = useNavigate();
 
-  // ANCHOR  GET Pokemon
-  useEffect(() => {
-    getPokemons();
-  }, []);
+  //NOTE REQUISIÇÃO POKEDEX
+  //ANCHOR Adiciona os pokemons na Pokedex através do estado global
+  const addPokemonPokedex = (pokemon) => {
+    const newListPokemon = data.pokemonList.filter((poke) => {
+      return poke !== pokemon;
+    });
+    //ANCHOR Envia o pokemon para a pokedex
+    data.setters.setPokedex([pokemon, ...data.pokedex]);
+    //ANCHOR Retira da lista na home
+    data.setters.setPokemonList(newListPokemon);
+  };
 
-  const getPokemons = async () => {
-    const listPokemon = [];
-    for (let i = 1; i < 21; i++) {
-      await axios
-        .get(`${pokeURL}/${i}/`)
-        .then((response) => {
-          listPokemon[i - 1] = {
-            id:response.data.id,
-            name:response.data.name,
-            status:response.data.stats,
-            moves:response.data.stats,
-            types:response.data.types,
-            sprites:response.data.sprites,
-            // setPokemonList(res.data.results);
-          };
-        })
-        .catch((error) => {
-          alert(error.response);
-        });
-    }
+  //NOTE REQUISIÇÃO DETALHES
+  const addPokemonDetailsPage = (pokemon) => {
+    //ANCHOR Envia o pokemon para página de detalhes
+    data.setters.setPokemonDetails(pokemon);
+    //ANCHOR Muda para página de detalhes
+    navigate("/Pokedetails");
   };
 
   return (
     <HomeContainer>
-      <Header />
-      {pokemonList &&
-        pokemonList.map((pokemon) => {
+      {data.states.pokemonList &&
+        data.states.pokemonList.map((pokemon) => {
           return (
             <PokeCard
               id={pokemon.id}
               nome={pokemon.name}
               img={pokemon.sprites.front_default}
-              
+
+              addPokemon = {()=> {addPokemonPokedex(pokemon)}}
+              details = {()=> {addPokemonDetailsPage(pokemon)}}
             />
           );
         })}
     </HomeContainer>
   );
 };
-
-/*const navigate = useNavigate()
-    
- const goToPokedexPage = (navigate) => {
-    navigate("/Pokedex")
-    }*/
