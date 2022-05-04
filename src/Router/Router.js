@@ -1,4 +1,4 @@
-import {HomePage} from "../Pages/HomePage/HomePage";
+import { HomePage } from "../Pages/HomePage/HomePage";
 import Pokedex from "../Pages/Pokedex/PokedexPage";
 import PokemonsDetails from "../Pages/PokemonsDetails/PokemonsDetailsPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
