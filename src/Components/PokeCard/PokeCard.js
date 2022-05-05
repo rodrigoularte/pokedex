@@ -14,11 +14,11 @@ export default function PokeCard(props) {
         <S.PokeImage src={props.img} alt={props.nome}></S.PokeImage>
       </S.CardImage>
       <S.CardFooter>
-        <S.Button1>
+        <S.TakeButton>
           <S.PokebolaImg src={pokebola} />
           Pegar!
-        </S.Button1>
-        <S.Button1 onClick={() => goToPokeDetails(navigate, props.nome)}>Detalhes</S.Button1>
+        </S.TakeButton>
+        <S.DetailsButton onClick={() => goToPokeDetails(navigate, props.nome)}>Detalhes</S.DetailsButton>
       </S.CardFooter>
     </S.CardContainer>
   );

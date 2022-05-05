@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
-import { HeaderContainer, LogoPokeDev, Botao, Titulo } from "./Styled";
-import {  useParams,useNavigate, useLocation } from "react-router-dom";
+import * as S from './Styled'
+
+import {  useNavigate, useLocation, useParams } from "react-router-dom";
+import icon from '../../Assets/pokedex.png'
 import pokedexLogo from "../../Assets/pokedex-logo.png";
+
 import GlobalStateContext from "../../global/GlobalStateContext";
 
 import { goBack, goToHome, goToPokeDetails, goToPokedexPage } from "../../Router/Coordinator";
@@ -10,26 +13,29 @@ const Header = () => {
   const data = useContext(GlobalStateContext);
   const pokemon = data.states.pokemonDetails;
   const navigate = useNavigate();
-  const params = useParams();
 const location = useLocation()
-  // console.log("fewfew",location.pathname);
+const pathParams = useParams()
+console.log(pathParams.pokemon);
+
   return (
-    <HeaderContainer>
-      <LogoPokeDev src={pokedexLogo} />
+    <>
+    <S.HeaderContainer>
+      <S.LogoPokeDev src={pokedexLogo} />
 
       {/*ANCHOR Condição para mostrar os botões de acordo com a página do site */}
-     {location.pathname  === '/' && <Titulo>Lista de Pokemons</Titulo>}
-      { location.pathname === "/" &&  <Botao onClick={() => goToPokedexPage(navigate)}>Ver Pokedex</Botao>} 
+     {/* {location.pathname  === '/' && <S.Titulo>Lista de Pokemons</S.Titulo>}
+      { location.pathname === "/" &&<div> <S.PokedexButton onClick={() => goToPokedexPage(navigate)}> <S.Icon src={icon}/>  Ver Pokedex</S.PokedexButton></div> }  */}
 
-     {location.pathname  === '/Pokedex' && <Titulo>Pokedex</Titulo>}
-     {location.pathname   === '/Pokedex' && <Botao onClick={() => goToHome(navigate)}>Voltar para lista de pokemons</Botao>} 
+     {/* {location.pathname  === '/Pokedex' && <S.Titulo>Pokedex</S.Titulo>}
+     {location.pathname   === '/Pokedex' && <S.HomeButton onClick={() => goToHome(navigate)}>Voltar para lista de pokemons</S.HomeButton>}  */}
 
-     {location.pathname  === '/Pokedetails' && <Titulo>{pokemon.name}</Titulo>}
-     {location.pathname   === "/Pokedetails" && <Botao onClick={() => goToPokeDetails(navigate)}>Nome do Pokemon</Botao>} 
-     {location.pathname  === '/Pokedetails' && <Botao onClick={() => goBack(navigate) }>Voltar</Botao>} 
+     {location.pathname   === `/Pokedetails/${pathParams.pokemon}`  && <S.HomeButton onClick={() => goToPokeDetails(navigate)}>Lista de Pokemos</S.HomeButton>} 
+     {location.pathname  === `/Pokedetails/${pathParams.pokemon}` && <S.Titulo>{pokemon.name}</S.Titulo>}
+     {location.pathname  === `/Pokedetails/${pathParams.pokemon}`  && <S.RemovePokemonButton onClick={() => goBack(navigate) }>Remover da Pokedex</S.RemovePokemonButton>} 
 
 
-    </HeaderContainer>
+    </S.HeaderContainer>
+    </>
   );
 };
 
