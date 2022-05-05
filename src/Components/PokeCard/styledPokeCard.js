@@ -29,61 +29,47 @@ export const CardFooter = styled.div`
 `;
 
 export const TakeButton = styled.button`
-  background-color: #1c2b59;
+  display: flex;
+  width: 95px;
+  height: 25px;
+  background-color: #FCC51D;
+  color: #1C2B59;
   border: none;
-  color: white;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.5rem;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
 
   :hover {
-    background-color: orangered;
-    border: none;
+    cursor: pointer;
+    background-color: #1C2B59;
+    color: white;
   }
-  :active {
-    box-shadow: none;
-  }
-  font-family: SultanNahiaW20;
-  font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
 `;
 
 export const DetailsButton = styled.button`
-  background-color: #1c2b59;
+  display: flex;
+  width: 95px;
+  height: 25px;
+  background-color: #FCC51D;
+  color: #1C2B59;
   border: none;
-  color: white;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.5rem;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
 
   :hover {
-    background-color: orangered;
-    border: none;
+    cursor: pointer;
+    background-color: #1C2B59;
+    color: white;
   }
-  :active {
-    box-shadow: none;
-  }
-  font-family: SultanNahiaW20;
-  font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
 `;
 
 export const PokebolaImg = styled.img`
-  width: 10px;
+  width: 20px;
 `;
 
 export const PokeName = styled.h1`

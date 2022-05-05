@@ -22,88 +22,73 @@ export const LogoPokeDev = styled.img`
 } */
 `;
 
-export const Titulo = styled.h1`
+export const Titulo = styled.h2`
   display: flex;
   justify-content: center;
-  font-family: SultanNahiaW20;
+  font-family: 'Press Start 2P', cursive;
   margin: auto;
-  color: white;
+  color: #1C2B59;
 `;
 
 export const PokedexButton = styled.button`
-  background-color: #1c2b59;
-  border: none;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  background-color: #1C2B59;
   color: white;
-  padding: 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  gap: 10px;
+
   :hover {
-    background-color: orangered;
-    border: none;
+    cursor: pointer;
+    background-color: #00144a;
   }
-  :active {
-    box-shadow: none;
-  }
-  font-family: SultanNahiaW20;
-  font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
 `;
 
 export const HomeButton = styled.button`
-  background-color: #1c2b59;
-  border: none;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  background-color: #1C2B59;
   color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  gap: 10px;
 
   :hover {
-    background-color: orangered;
-    border: none;
+    cursor: pointer;
+    background-color: #00144a;
   }
-  :active {
-    box-shadow: none;
-  }
-  font-family: SultanNahiaW20;
-  font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
 `;
 
 export const RemovePokemonButton = styled.button`
-  background-color: #FF0000;
-  border: none;
+  display: flex;
+  width: 220px;
+  height: 30px;
+  background-color: #ff0000;
   color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  gap: 10px;
+  margin-left: 30px;
+
   :hover {
-    background-color: orangered;
-    border: none;
+    cursor: pointer;
+    background-color: #e80000;
   }
-  :active {
-    box-shadow: none;
-  }
-  font-family: SultanNahiaW20;
-  font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
 `;
 
 export const ReturnButton = styled.button`
@@ -131,8 +116,8 @@ export const ReturnButton = styled.button`
   margin-right: 10px;
 `;
 
-export const Icon = styled.img`
-  width: 2rem;
+export const PokedexImg = styled.img`
+  width: 20px;
 `;
 
 export const LogoPokeball = styled.img`
