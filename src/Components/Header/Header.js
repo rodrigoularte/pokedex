@@ -15,7 +15,7 @@ const Header = () => {
   const navigate = useNavigate();
 const location = useLocation()
 const pathParams = useParams()
-console.log(pathParams.pokemon);
+
 
   return (
     <>
@@ -23,11 +23,11 @@ console.log(pathParams.pokemon);
       <S.LogoPokeDev src={pokedexLogo} />
 
       {/*ANCHOR Condição para mostrar os botões de acordo com a página do site */}
-     {/* {location.pathname  === '/' && <S.Titulo>Lista de Pokemons</S.Titulo>}
-      { location.pathname === "/" &&<div> <S.PokedexButton onClick={() => goToPokedexPage(navigate)}> <S.Icon src={icon}/>  Ver Pokedex</S.PokedexButton></div> }  */}
+     {location.pathname  === '/' && <S.Titulo>Lista de Pokemons</S.Titulo>}
+      { location.pathname === "/" &&<div> <S.PokedexButton onClick={() => goToPokedexPage(navigate)}> <S.Icon src={icon}/>  Ver Pokedex</S.PokedexButton></div> } 
 
-     {/* {location.pathname  === '/Pokedex' && <S.Titulo>Pokedex</S.Titulo>}
-     {location.pathname   === '/Pokedex' && <S.HomeButton onClick={() => goToHome(navigate)}>Voltar para lista de pokemons</S.HomeButton>}  */}
+     {location.pathname  === '/Pokedex' && <S.Titulo>Pokedex</S.Titulo>}
+     {location.pathname   === '/Pokedex' && <S.HomeButton onClick={() => goToHome(navigate)}>Voltar para lista de pokemons</S.HomeButton>} 
 
      {location.pathname   === `/Pokedetails/${pathParams.pokemon}`  && <S.HomeButton onClick={() => goToPokeDetails(navigate)}>Lista de Pokemos</S.HomeButton>} 
      {location.pathname  === `/Pokedetails/${pathParams.pokemon}` && <S.Titulo>{pokemon.name}</S.Titulo>}

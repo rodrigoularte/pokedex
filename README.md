@@ -3,7 +3,7 @@
 POKEDEX
 
 </h1>
-
+  
 <div style="display:flex; justify-content:center;" >
 
 <a href="#-tecnologias">Tecnologias</a>   |
@@ -30,7 +30,7 @@ O pokedex é um site de pokemons mostrando imagens,atributos e poderes podendo s
 
 **## 👀 Surge**
 
-Você pode visualizar o site  através [desse link]()
+Você pode visualizar o site  através [desse link](https://shaw-pokedex7.surge.sh/)
 
 **## ✍ Layout**
 
