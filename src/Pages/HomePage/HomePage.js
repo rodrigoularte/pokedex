@@ -4,7 +4,7 @@ import PokeCard from "../../Components/PokeCard/PokeCard";
 import { useNavigate } from "react-router-dom";
 
 import { HomeContainer } from "../HomePage/Styled";
-import { goToPokedexPage } from "../../Router/Coordinator";
+
 
 export const HomePage = () => {
   const data = useContext(GlobalStateContext);

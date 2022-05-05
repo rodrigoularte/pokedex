@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Coluna1Container, Coluna2Container, DetailsContainer, PokeImg, PokeImgContainer, TipoContainer, AtaquesContainer } from "../PokemonsDetails/Styled"
 import { pokeURL } from '../../Constants/pokeURL'
-import Header from '../../Components/Header/Header'
 import { useParams } from 'react-router-dom'
 
 

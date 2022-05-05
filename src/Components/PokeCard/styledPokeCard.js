@@ -1,77 +1,92 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 220px;
   height: 250px;
-  background-color: #FFE081;
-`
+  background-color: #ffe081;
+`;
 
 export const CardImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-`
+`;
 
 export const PokeImage = styled.img`
   width: 150px;
-`
+`;
 
 export const CardFooter = styled.div`
   display: flex;
   width: 100%;
   height: 50px;
-  background-color: #FCC51D;
+  background-color: #fcc51d;
   justify-content: space-around;
   align-items: center;
-`
+`;
 
-export const Button1 = styled.button`
-  display: flex;
-  width: 95px;
-  height: 25px;
-  background-color: #FCC51D;
-  color: #1C2B59;
+export const TakeButton = styled.button`
+  background-color: #1c2b59;
   border: none;
-  border-radius: 5px;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 8px;
+  color: white;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 
   :hover {
-    cursor: pointer;
-    background-color: #1C2B59;
-    color: white;
+    background-color: orangered;
+    border: none;
   }
-`
+  :active {
+    box-shadow: none;
+  }
+  font-family: SultanNahiaW20;
+  font-size: 1.2em;
+  margin-left: 10px;
+  margin-right: 10px;
+`;
+
+export const DetailsButton = styled.button`
+  background-color: #1c2b59;
+  border: none;
+  color: white;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  :hover {
+    background-color: orangered;
+    border: none;
+  }
+  :active {
+    box-shadow: none;
+  }
+  font-family: SultanNahiaW20;
+  font-size: 1.2em;
+  margin-left: 10px;
+  margin-right: 10px;
+`;
 
 export const PokebolaImg = styled.img`
-  width: 20px;
-`
+  width: 10px;
+`;
 
-export const Button2 = styled.button`
-  display: flex;
-  width: 95px;
-  height: 25px;
-  background-color: #FCC51D;
-  color: #FF0000;
-  border: none;
-  border-radius: 5px;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 8px;
-
-  :hover {
-    cursor: pointer;
-    background-color: #FF0000;
-    color: white;
-  }
-`
-export const PokeName = styled.h1 `
-    font-size: 1.2em;
-    color: #30a7d7 ;
-`
+export const PokeName = styled.h1`
+  font-size: 1.2em;
+  color: #30a7d7;
+`;
