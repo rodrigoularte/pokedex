@@ -8,8 +8,15 @@ export const CardContainer = styled.div`
   background-color: #FFE081;
 `
 
-export const CardImage = styled.img`
+export const CardImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
+`
+
+export const PokeImage = styled.img`
+  width: 150px;
 `
 
 export const CardFooter = styled.div`
