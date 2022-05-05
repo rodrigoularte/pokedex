@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 
-export const listContainer = styled.div`
-
+export const CardContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 4% 0;
     justify-content: center;
-    height: 100vh;
-
+    align-items: center;
 `
