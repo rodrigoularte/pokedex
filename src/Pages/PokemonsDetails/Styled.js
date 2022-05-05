@@ -10,7 +10,7 @@ export const DetailsContainer = styled.div`
 
   h2 {
     font-size: 20px;
-    margin-bottom: 30px;
+    padding: 20px 0;
   }
 
   p {

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Coluna1Container, Coluna2Container, DetailsContainer, PokeImg, PokeImgContainer, TipoContainer, AtaquesContainer } from "../PokemonsDetails/Styled"
 import { pokeURL } from '../../Constants/pokeURL'
 import Header from '../../Components/Header/Header'
+import { useParams } from 'react-router-dom'
 
 
 
@@ -10,11 +11,14 @@ export const PokemonsDetails = () => {
 
   const [pokemon, setPokemon] = useState([])
 
+  const pathParams = useParams()
+
   const getPokemons = () => {
 
     axios
-      .get(`${pokeURL}/pikachu`)
+      .get(`${pokeURL}/pokemon/${pathParams.pokemon}`)
       .then((response) => {
+        console.log(`${pokeURL}/pokemon/${pathParams.pokemon}`)
         setPokemon(response.data)
       })
       .catch((error) => {
