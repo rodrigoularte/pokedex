@@ -6,7 +6,6 @@ import Header from '../../Components/Header/Header'
 import { useParams } from 'react-router-dom'
 
 
-
 export const PokemonsDetails = () => {
 
   const [pokemon, setPokemon] = useState([])
@@ -32,7 +31,7 @@ export const PokemonsDetails = () => {
 
   return (
     <>
-      <Header />
+     
       {pokemon && pokemon.sprites && (
       <DetailsContainer>
         <PokeImgContainer>

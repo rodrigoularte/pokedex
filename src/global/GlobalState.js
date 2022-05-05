@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { pokeURL } from "../Constants/pokeURL";
+// import { pokeURL } from "../Constants/pokeURL";
 import GlobalStateContext from "./GlobalStateContext";
 
 export const GlobalState = (props) => {

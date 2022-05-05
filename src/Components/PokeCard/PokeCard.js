@@ -2,7 +2,7 @@ import React from "react"
 import * as S from "./styledPokeCard"
 import pokebola from "../../Assets/pokeball.png"
 import { useNavigate } from "react-router-dom"
-import { goToPokeDetais } from "../../Router/Coordinator"
+import { goToPokeDetails } from "../../Router/Coordinator"
 
 export default function PokeCard(props) {
 
@@ -18,7 +18,7 @@ export default function PokeCard(props) {
           <S.PokebolaImg src={pokebola} />
           Pegar!
         </S.Button1>
-        <S.Button1 onClick={() => goToPokeDetais(navigate, props.nome)}>Detalhes</S.Button1>
+        <S.Button1 onClick={() => goToPokeDetails(navigate, props.nome)}>Detalhes</S.Button1>
       </S.CardFooter>
     </S.CardContainer>
   );
