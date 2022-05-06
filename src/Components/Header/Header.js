@@ -10,16 +10,21 @@ import pokedexLogo from "../../Assets/pokedex-logo.png"
 import { goToHome, goToPokedexPage } from "../../Router/Coordinator"
 
 const Header = () => {
+
+
+
   // const data = useContext(GlobalStateContext)
   const navigate = useNavigate()
   const location = useLocation()
   const pathParams = useParams()
   console.log(pathParams.pokemon)
 
+
   return (
     <>
       <S.HeaderContainer>
         <S.LogoPokeDev src={pokedexLogo} />
+
 
         {/* ---------------- Header Home ---------------- */}
         {location.pathname === `/` &&
@@ -31,6 +36,7 @@ const Header = () => {
         <S.PokedexButton onClick={() => goToPokedexPage(navigate)}>
           <S.PokedexImg src={pokedexImg}/>  Ver Pokedex
         </S.PokedexButton>}
+
 
         {/* ---------------- Header Pokedex ---------------- */}
         {location.pathname === `/Pokedex` &&

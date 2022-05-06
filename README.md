@@ -3,7 +3,7 @@
 POKEDEX
 
 </h1>
-
+  
 <div style="display:flex; justify-content:center;" >
 
 <a href="#-tecnologias">Tecnologias</a>   |
