@@ -8,7 +8,6 @@ export const GlobalState = (props) => {
   const [pokemonList, setPokemonList] = useState([]);
   //ANCHOR lista de pokemons da pokedex
   const [pokedex, setPokedex] = useState([]);
-  console.log(pokedex)
   //ANCHOR para página de detalhes do pokemon
   const [pokemonDetails, setPokemonDetails] = useState([]);
 
@@ -20,7 +19,6 @@ export const GlobalState = (props) => {
     for (let i = 1; i < 21; i++) {
       await axios
         .get(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-        // .get(`${pokeURL}/${i}/`)
         .then((response) => {
           listPokemon[i - 1] = {
             id: response.data.id,
