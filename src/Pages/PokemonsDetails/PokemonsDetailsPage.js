@@ -19,7 +19,7 @@ export const PokemonsDetails = () => {
         setPokemon(response.data)
       })
       .catch((error) => {
-        console.log(error.response)
+        alert(error.response)
       })
   }
 
