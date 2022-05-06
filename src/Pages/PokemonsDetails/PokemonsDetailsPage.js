@@ -16,7 +16,6 @@ export const PokemonsDetails = () => {
     axios
       .get(`${pokeURL}/pokemon/${pathParams.pokemon}`)
       .then((response) => {
-        console.log(`${pokeURL}/pokemon/${pathParams.pokemon}`)
         setPokemon(response.data)
       })
       .catch((error) => {

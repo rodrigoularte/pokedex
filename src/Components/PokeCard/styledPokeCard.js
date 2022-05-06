@@ -68,6 +68,26 @@ export const DetailsButton = styled.button`
   }
 `;
 
+export const RemoveButton = styled.button`
+  display: flex;
+  width: 95px;
+  height: 25px;
+  background-color: #FCC51D;
+  color: #FF0000;
+  border: none;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+
+  :hover {
+    cursor: pointer;
+    background-color: #FF0000;
+    color: white;
+  }
+`;
+
 export const PokebolaImg = styled.img`
   width: 20px;
 `;

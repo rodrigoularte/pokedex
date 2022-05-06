@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
-import PokeCard from "../../Components/PokeCard/PokeCard";
 import { useNavigate } from "react-router-dom";
+import PokeCard from "../../Components/PokeCard/PokeCard";
 
 import { HomeContainer } from "../HomePage/Styled";
 
@@ -10,14 +10,14 @@ export const HomePage = () => {
   const data = useContext(GlobalStateContext);
   const navigate = useNavigate();
 
-  //NOTE REQUISIÇÃO POKEDEX
+
   //ANCHOR Adiciona os pokemons na Pokedex através do estado global
   const addPokemonPokedex = (pokemon) => {
-    const newListPokemon = data.pokemonList.filter((poke) => {
+    const newListPokemon = data.states.pokemonList.filter((poke) => {
       return poke !== pokemon;
     });
     //ANCHOR Envia o pokemon para a pokedex
-    data.setters.setPokedex([pokemon, ...data.pokedex]);
+    data.setters.setPokedex([pokemon, ...data.states.pokedex]);
     //ANCHOR Retira da lista na home
     data.setters.setPokemonList(newListPokemon);
   };
@@ -40,8 +40,8 @@ export const HomePage = () => {
               nome={pokemon.name}
               img={pokemon.sprites.front_default}
 
-              addPokemon = {()=> {addPokemonPokedex(pokemon)}}
-              details = {()=> {addPokemonDetailsPage(pokemon)}}
+              adicionar = {()=> {addPokemonPokedex(pokemon)}}
+              detalhes = {()=> {addPokemonDetailsPage(pokemon)}}
             />
           );
         })}

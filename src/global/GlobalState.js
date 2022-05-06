@@ -8,6 +8,7 @@ export const GlobalState = (props) => {
   const [pokemonList, setPokemonList] = useState([]);
   //ANCHOR lista de pokemons da pokedex
   const [pokedex, setPokedex] = useState([]);
+  console.log(pokedex)
   //ANCHOR para página de detalhes do pokemon
   const [pokemonDetails, setPokemonDetails] = useState([]);
 
@@ -42,12 +43,25 @@ export const GlobalState = (props) => {
     getPokemons();
   }, []);
 
-  //ANCHOR variáveis para o provider
+
+  const removePokemon = (pokemon) => {
+    const newListPokemon = pokedex.filter((poke) => {
+      return poke !== pokemon;
+    });
+    //ANCHOR envia o pokemon para a Pokedex
+    setPokemonList([pokemon, ...pokemonList]);
+    // ANCHOR Retira da pokedex
+    setPokedex(newListPokemon);
+  };
+
+  //ANCHOR Variáveis para o provider
   const states = { pokemonList, pokedex, pokemonDetails };
   const setters = { setPokemonList, setPokedex, setPokemonDetails };
   const requests = { getPokemons };
+  const event = {removePokemon}
 
-  const data = { states, setters, requests };
+  const data = { states, setters, requests,event };
+  
 
   return (
     <GlobalStateContext.Provider value={data}>
