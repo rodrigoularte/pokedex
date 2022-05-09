@@ -1,3 +1,4 @@
+![poke](https://user-images.githubusercontent.com/67668995/167419646-2ee7ac2f-bf00-4cf6-a024-ad245d3e00f1.png)
 
 <h1 align="center">
 POKEDEX
