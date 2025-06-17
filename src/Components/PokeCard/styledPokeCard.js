@@ -6,6 +6,7 @@ export const CardContainer = styled.div`
   width: 220px;
   height: 250px;
   background-color: #ffe081;
+  border-radius: 8px;
 `;
 
 export const CardImage = styled.div`
@@ -26,24 +27,26 @@ export const CardFooter = styled.div`
   background-color: #fcc51d;
   justify-content: space-around;
   align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
 
 export const TakeButton = styled.button`
   display: flex;
   width: 95px;
   height: 25px;
-  background-color: #FCC51D;
-  color: #1C2B59;
+  background-color: #fcc51d;
+  color: #1c2b59;
   border: none;
   border-radius: 5px;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 8px;
 
   :hover {
     cursor: pointer;
-    background-color: #1C2B59;
+    background-color: #1c2b59;
     color: white;
   }
 `;
@@ -52,18 +55,18 @@ export const DetailsButton = styled.button`
   display: flex;
   width: 95px;
   height: 25px;
-  background-color: #FCC51D;
-  color: #1C2B59;
+  background-color: #fcc51d;
+  color: #1c2b59;
   border: none;
   border-radius: 5px;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 8px;
 
   :hover {
     cursor: pointer;
-    background-color: #1C2B59;
+    background-color: #1c2b59;
     color: white;
   }
 `;
@@ -72,18 +75,18 @@ export const RemoveButton = styled.button`
   display: flex;
   width: 95px;
   height: 25px;
-  background-color: #FCC51D;
-  color: #FF0000;
+  background-color: #fcc51d;
+  color: #ff0000;
   border: none;
   border-radius: 5px;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 8px;
 
   :hover {
     cursor: pointer;
-    background-color: #FF0000;
+    background-color: #ff0000;
     color: white;
   }
 `;
