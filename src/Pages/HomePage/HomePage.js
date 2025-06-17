@@ -5,11 +5,9 @@ import PokeCard from "../../Components/PokeCard/PokeCard";
 
 import { HomeContainer } from "../HomePage/Styled";
 
-
 export const HomePage = () => {
   const data = useContext(GlobalStateContext);
   const navigate = useNavigate();
-
 
   //ANCHOR Adiciona os pokemons na Pokedex através do estado global
   const addPokemonPokedex = (pokemon) => {
@@ -36,12 +34,16 @@ export const HomePage = () => {
         data.states.pokemonList.map((pokemon) => {
           return (
             <PokeCard
+              key={pokemon.id}
               id={pokemon.id}
               nome={pokemon.name}
               img={pokemon.sprites.front_default}
-
-              adicionar = {()=> {addPokemonPokedex(pokemon)}}
-              detalhes = {()=> {addPokemonDetailsPage(pokemon)}}
+              adicionar={() => {
+                addPokemonPokedex(pokemon);
+              }}
+              detalhes={() => {
+                addPokemonDetailsPage(pokemon);
+              }}
             />
           );
         })}
